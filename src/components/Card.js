@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = (props)=>{
 
-
+console.log(props)
     return(
         <article className="element">
             <button className="element__delete-button" type="button"></button>
