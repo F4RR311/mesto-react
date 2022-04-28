@@ -1,44 +1,24 @@
-import './index.css'
+import React from "react";
+import '../index.css';
+import Header from "./Header";
+import Main from "./Main";
+import Footer from "./Footer";
+import Card from "./Card";
+
 
 function App() {
     return (
         <div className="page">
-            <header className="header">
-                <img className="header__logo" type="image/svg"
-                     alt="Логотип Mesto"/>
+            <Header/>
 
-            </header>
-            <main>
-                <section className="profile">
-                    <button className="profile__avatar-btn" type="button" title="Обновить аватар">
-                        <img className="profile__avatar" src="#"
-                             alt="Аватар профиля"/></button>
-                    <div className="profile__info">
-                        <div className="profile__info-edit-wrap">
-                            <h1 className="profile__title"></h1>
-                            <button className="profile__edit-button" type="button"></button>
-                        </div>
-                        <p className="profile__description"></p>
-                    </div>
-                    <button className="profile__add-card" type="button"></button>
-                </section>
-                <section className="elements">
-                    <template className="elements-template">
-                        <article className="element">
-                            <button className="element__delete-button" type="button"></button>
-                            <img className="element__image" alt=""/>
-                            <h2 className="element__title"></h2>
-                            <div className="element__like-container">
-                                <button className="element__button-heart" type="button" aria-label="Нравится"></button>
-                                <span className="element__button-heart-count"></span>
-                            </div>
-                        </article>
-                    </template>
-                </section>
-            </main>
-            <footer className="footer">
-                <p className="footer__copyright">&copy; 2022. Леонтьев Валерий</p>
-            </footer>
+            <Main/>
+            <Footer/>
+            <section className="elements">
+                <template className="elements-template">
+                    <Card />
+                </template>
+            </section>
+
             <div className="popup popup_profile">
                 <div className="popup__container">
                     <button className="popup__close" type="button" aria-label="close"></button>

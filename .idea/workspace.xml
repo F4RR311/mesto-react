@@ -19,74 +19,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe0123e0-ba98-4ceb-a72c-247bd806fbfc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/__button-heart/_liked/element__button-heart_liked.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/__button-heart/element__button-heart.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/__delete-button/element__delete-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/__image/element__image.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/__like-container/element__like-container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/__title/element__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/element/element.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/elements/elements.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/footer/__copyright/footer__copyright.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/footer/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/header/__line/header__line.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/header/__logo/header__logo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/header/header.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/page/page.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__button/_disabled/popup__button_disabled.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__button/popup__button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__close/popup__close.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__container/popup__container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__form-field/popup__form-field.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__image-container/popup__image-container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__image-fiqure/popup__image-fiqure.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__image-name/popup__image-name.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__image/popup__image.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__input-error/_visible/popup__input-error_visible.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__input-error/popup__input-error.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__input/_type_error/popup__input_type_error.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__input/popup__input.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__overlay/popup__overlay.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__set/popup__set.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/__title/popup__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/_opened/popup_opened.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/popup/popup.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__add-button/profile__add-card.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar-btn/profile__avatar-btn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__description/profile__description.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__edit-button/profile__edit-button.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__info-edit-wrap/profile__info-edit-wrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__info/profile__info.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__title/profile__title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/add-button-320.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/add-button.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/close-btn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/delete-btn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/delete-btn1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/edit-avatar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/edit-button.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/kusto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/liked-heart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/mesto-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/save-btn.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/unliked-heart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Black.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Black.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Medium.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Medium.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/fonts/Inter-Regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/fonts/fonts.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/vendor/normalize.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="fe0123e0-ba98-4ceb-a72c-247bd806fbfc" name="Default Changelist" comment="new+files">
+      <change afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/elements/elements.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/elements/elements.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/page/page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/page/page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -102,7 +60,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Projects ReactJavaScriprt/Pizza" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -114,6 +72,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Yandex practicum\ten sprint\mesto-react\src\components" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Yandex practicum\ten sprint\mesto-react\src" />
     </key>
@@ -141,8 +102,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650909786625</updated>
-      <workItem from="1650909787687" duration="2446000" />
+      <workItem from="1650909787687" duration="4598000" />
+      <workItem from="1651011543373" duration="7000" />
+      <workItem from="1651168389014" duration="3868000" />
     </task>
+    <task id="LOCAL-00001" summary="import jsx+css">
+      <created>1650915036421</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650915036421</updated>
+    </task>
+    <task id="LOCAL-00002" summary="new+files">
+      <created>1650915229829</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650915229829</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +136,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="import jsx+css" />
+    <MESSAGE value="new+files" />
+    <option name="LAST_COMMIT_MESSAGE" value="new+files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="408" key="#ESLint" timestamp="1650909941736">
@@ -168,9 +152,13 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="690" y="263" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1650910278961" />
-    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1650910046734">
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1651172362922">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1650910046734" />
+    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1651172362922" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1650915238578">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1650915238578" />
   </component>
 </project>
