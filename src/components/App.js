@@ -1,10 +1,9 @@
-import React, {useEffect} from "react";
+import React from "react";
 import '../index.css';
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import Card from "./Card";
-import {api} from "../utils/Api";
+
 //
 // isEditProfilePopupOpen
 // isAddPlacePopupOpen
@@ -13,31 +12,10 @@ import {api} from "../utils/Api";
 
 function App() {
 
-    const [userName, setUserName] = React.useState();
-    const [profile, setProfile] = React.useState({});
-    const [userDescription , setUserDescription ] = React.useState({});
-    const [userAvatar, setUserAvatar] = React.useState({});
-    const [cards, setCards] = React.useState([]);
-
-    useEffect(()=>{
-        Promise.all([api.getProfile(), api.getInitialCards()])
-            .then(([userData, cards]) => {
-                setProfile(userData);
-                setCards(cards);
-
-            })
-    },[]);
-
     return (
         <div className="page">
             <Header/>
-
-            <Main profile={profile}
-                  avatar={profile.avatar}
-                  name={profile.name}
-                  about={profile.about}
-                  cards={cards}
-                  />
+            <Main/>
             <Footer/>
             <section className="elements">
                 <template className="elements-template">
