@@ -1,12 +1,12 @@
-import React, {useEffect} from "react";
+import  {useEffect, useState} from "react";
 import Card from "./Card";
 import {api} from "../utils/Api";
 
 
 const Main = (props) => {
 
-    const [userProfile, setProfile] = React.useState({});
-    const [cards, setCards] = React.useState([]);
+    const [userProfile, setProfile] = useState({});
+    const [cards, setCards] = useState([]);
 
     useEffect(() => {
         Promise.all([api.getProfile(), api.getInitialCards()])
@@ -19,7 +19,6 @@ const Main = (props) => {
                 console.error(err);
             })
     }, []);
-
 
     return (
         <main>
@@ -40,10 +39,9 @@ const Main = (props) => {
                 </button>
             </section>
             <section className="elements">
-
-                {cards.map((card, id) => (
+                {cards.map((card, _id) => (
                     <Card
-                        key={id}
+                        key={_id}
                         card={card}
                         link={card.link}
                         name={card.name}
@@ -52,12 +50,9 @@ const Main = (props) => {
                     />
 
                 ))}
-
-
             </section>
         </main>
     )
-
 }
 
 export default Main;
