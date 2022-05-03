@@ -48,7 +48,6 @@ const Main = (props) => {
                         likes={card.likes.length}
                         onCardClick={props.onCardClick}
                     />
-
                 ))}
             </section>
         </main>

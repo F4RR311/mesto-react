@@ -5,13 +5,12 @@
     background-color: transparent;
     background-image: url(../../../images/add-button.svg);
     background-size: cover;
-
 }
 
 .profile__add-card:hover {
     cursor: pointer;
     opacity: 0.6;
-    transition: opacity 0.8s ease;
+    transition: opacity 0.7s ease;
 }
 
 @media (max-width: 767px) {
