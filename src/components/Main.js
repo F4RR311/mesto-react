@@ -2,7 +2,6 @@ import  {useEffect, useState} from "react";
 import Card from "./Card";
 import {api} from "../utils/Api";
 
-
 const Main = (props) => {
 
     const [userProfile, setProfile] = useState({});
@@ -41,7 +40,7 @@ const Main = (props) => {
             <section className="elements">
                 {cards.map((card, _id) => (
                     <Card
-                        key={_id}
+                        key={card._id}
                         card={card}
                         link={card.link}
                         name={card.name}
