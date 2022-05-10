@@ -10,6 +10,11 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select>
       <path>
@@ -20,9 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe0123e0-ba98-4ceb-a72c-247bd806fbfc" name="Default Changelist" comment="refactor">
+    <list default="true" id="fe0123e0-ba98-4ceb-a72c-247bd806fbfc" name="Default Changelist" comment="final refactor">
+      <change afterPath="$PROJECT_DIR$/src/contexts/CurrentUserContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.old.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +128,9 @@
       <workItem from="1651505141314" duration="12265000" />
       <workItem from="1651528155261" duration="2655000" />
       <workItem from="1651583605858" duration="6691000" />
-      <workItem from="1651610662376" duration="920000" />
+      <workItem from="1651610662376" duration="1577000" />
+      <workItem from="1652189591418" duration="14000" />
+      <workItem from="1652200712211" duration="2934000" />
     </task>
     <task id="LOCAL-00001" summary="import jsx+css">
       <created>1650915036421</created>
@@ -193,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1651588360082</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="final refactor">
+      <created>1651611611703</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1651611611703</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +237,8 @@
     <MESSAGE value="finish_popups" />
     <MESSAGE value="finish" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="final refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="final refactor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="408" key="#ESLint" timestamp="1650909941736">
@@ -232,10 +249,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="690" y="263" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1650910278961" />
-    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1651611393583">
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1652203427159">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1651611393583" />
+    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652203427159" />
     <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1651530836843">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
@@ -252,10 +269,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.right/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1651530836843" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1651588364080">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1651611621076">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1651588364080" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1651611621076" />
     <state x="616" y="238" key="run.anything.popup" timestamp="1651506012057">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
