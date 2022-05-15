@@ -32,19 +32,22 @@ class Api {
 
     }
 
-    editProfile(name, about) {
+    editProfile(data) {
         return fetch(`${this._baseUrl}/users/me`, {
             method: "PATCH",
             headers: this._headers,
             body: JSON.stringify({
-                name,
-                about
+                 name: data.profile_name,
+                 about: data.profile_job
+
             })
 
         })
             .then(this._checkResponse)
 
     }
+
+
 
     addCard(name, link) {
         return fetch(`${this._baseUrl}/cards`, {

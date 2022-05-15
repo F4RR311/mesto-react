@@ -25,13 +25,13 @@ const Card = (props) => {
 
     return (
         <article className="element">
-            <button className={cardDeleteButtonClassName} type="button"></button>
+            <button className={cardDeleteButtonClassName} onClick={props.onCardDelete} type="button"> </button>
             <img className="element__image" alt={props.name} src={props.link} title="Посмотреть в полном размере"
                  onClick={handleClick}/>
             <h2 className="element__title">{props.name} </h2>
             <div className="element__like-container">
                 <button className={cardLikeButtonClassName} onClick={handleLikeClick} type="button"
-                        aria-label="Нравится"></button>
+                        aria-label="Нравится"> </button>
                 <span className="element__button-heart-count">{props.likes} </span>
             </div>
         </article>

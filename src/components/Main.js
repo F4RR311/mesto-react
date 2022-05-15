@@ -24,12 +24,28 @@ const Main = (props) => {
         if (!isLiked) {
             api.addLike(card._id, !isLiked).then((newCard) => {
                 setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+            }).catch((err) => {
+                console.error(err);
             });
         } else {
             api.deleteLike(card._id, !isLiked).then((newCard) => {
                 setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+            }).catch((err) => {
+                console.error(err);
             });
         }
+    }
+
+    function handleDeleteCard(card) {
+
+        api.removeCard(card).then(() => {
+            setCards((items) => {
+                items.filter((c) => c._id !== card._id && c)
+            });
+        }).catch((err) => {
+            console.error(err);
+        });
+
     }
 
     return (
@@ -61,6 +77,7 @@ const Main = (props) => {
                         likes={card.likes.length}
                         onCardClick={props.onCardClick}
                         onCardLike={handleCardLike}
+                        onCardDelete={handleDeleteCard}
 
                     />
                 ))}

@@ -7,6 +7,7 @@ import PopupWithForm from "./PopupWithForm";
 import ImagePopup from "./ImagePopup";
 import {api} from "../utils/Api.js"
 import {CurrentUserContext} from "../contexts/CurrentUserContext"
+import EditProfilePopup from "./EditProfilePopup";
 
 function App() {
 
@@ -47,7 +48,22 @@ function App() {
         setAddPlacePopupOpen(false)
         setEditAvatarPopupOpen(false)
         setSelectedCard(null)
+    }
 
+
+    function handleSubmit(e) {
+        e.preventDefault();
+    }
+
+    function handleUpdateUser(data) {
+        api.editProfile(data).then((newUser) => {
+            console.log(newUser)
+            setCurrentUser(newUser);
+            closeAllPopups();
+        })
+            .catch((err) => {
+                console.error(err);
+            });
     }
 
     return (
@@ -62,31 +78,6 @@ function App() {
                           onCardClick={handleCardClick}
                     />
                     <Footer/>
-
-                    <PopupWithForm
-                        isOpen={isEditProfilePopupOpen}
-                        onClose={closeAllPopups}
-                        name={'editProfile'}
-                        form={'profileData'}
-                        title={'Редактировать профиль'}
-                        buttonText={'Сохранить'}>
-                        <input className="popup__input"
-                               id="popup__name-input"
-                               name="name"
-                               type="text"
-                               placeholder="Имя"
-                               required minLength="2" maxLength="40"/>
-                        <span id="popup__name-input-error" className="popup__input-error">
-                        </span>
-                        <input className="popup__input"
-                               name="job"
-                               id="popup__job-input"
-                               type="text"
-                               placeholder="О себе"
-                               required minLength="2" maxLength="200"/>
-                        <span id="popup__job-input-error" className="popup__input-error">
-                        </span>
-                    </PopupWithForm>
 
                     <PopupWithForm
                         isOpen={isAddPlacePopupOpen}
@@ -123,6 +114,14 @@ function App() {
                         card={selectedCard}
                         onClose={closeAllPopups}
                     />
+                    <EditProfilePopup
+                        onClose={closeAllPopups}
+                        isOpen={isEditProfilePopupOpen}
+                        onUpdateUser={handleUpdateUser}
+
+                    />
+
+
                 </div>
             </div>
         </CurrentUserContext.Provider>
