@@ -1,52 +1,10 @@
-import {useContext, useEffect, useState} from "react";
+import {useContext} from "react";
 import Card from "./Card";
-import {api} from "../utils/Api";
 import {CurrentUserContext} from "../contexts/CurrentUserContext"
 
 
 const Main = (props) => {
     const currentUser = useContext(CurrentUserContext);
-    const [cards, setCards] = useState([]);
-
-    useEffect(() => {
-        api.getInitialCards()
-            .then((cards) => {
-                setCards(cards);
-            })
-            .catch((err) => {
-                console.error(err);
-            })
-    }, []);
-
-    function handleCardLike(card) {
-        const isLiked = card.likes.some(i => i._id === currentUser._id);
-
-        if (!isLiked) {
-            api.addLike(card._id, !isLiked).then((newCard) => {
-                setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-            }).catch((err) => {
-                console.error(err);
-            });
-        } else {
-            api.deleteLike(card._id, !isLiked).then((newCard) => {
-                setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-            }).catch((err) => {
-                console.error(err);
-            });
-        }
-    }
-
-    function handleDeleteCard(card) {
-
-        api.removeCard(card).then(() => {
-            setCards((items) => {
-                items.filter((c) => c._id !== card._id && c)
-            });
-        }).catch((err) => {
-            console.error(err);
-        });
-
-    }
 
     return (
 
@@ -68,7 +26,7 @@ const Main = (props) => {
                 </button>
             </section>
             <section className="elements">
-                {cards.map((card, _id) => (
+                {props.cards.map((card, _id) => (
                     <Card
                         key={card._id}
                         card={card}
@@ -76,8 +34,8 @@ const Main = (props) => {
                         name={card.name}
                         likes={card.likes.length}
                         onCardClick={props.onCardClick}
-                        onCardLike={handleCardLike}
-                        onCardDelete={handleDeleteCard}
+                        onCardLike={props.onCardLike}
+                        onCardDelete={props.onCardDelete}
 
                     />
                 ))}

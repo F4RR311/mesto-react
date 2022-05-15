@@ -17,16 +17,16 @@ function App() {
     const [isEditAvatarPopupOpen, setEditAvatarPopupOpen] = useState(false);
     const [selectedCard, setSelectedCard] = useState(null);
     const [currentUser, setCurrentUser] = useState({})
+    const [cards, setCards] = useState([]);
+
 
     useEffect(() => {
-        api.getProfile()
-            .then((profileInfo) => {
-                setCurrentUser(profileInfo)
-            })
-            .catch((err) => {
-                console.error(err);
-            })
-    }, [])
+          Promise.all([api.getProfile(), api.getInitialCards()])
+              .then(([user, cards])=>{
+                  setCurrentUser(user)
+                  setCards(cards)
+              })
+        }, []);
 
     function handleEditAvatarClick() {
         setEditAvatarPopupOpen(true);
@@ -62,15 +62,44 @@ function App() {
             });
     }
 
-    function handleUpdateAvatar(avatar) {
-        api.addAvatar(avatar).then((newAvatar) => {
-
+    function handleUpdateAvatar(data) {
+        api.addAvatar(data).then((newAvatar) => {
             setCurrentUser(newAvatar);
             closeAllPopups();
         })
             .catch((err) => {
                 console.error(err);
             });
+    }
+
+    function handleCardLike(card) {
+        const isLiked = card.likes.some(i => i._id === currentUser._id);
+
+        if (!isLiked) {
+            api.addLike(card._id, !isLiked).then((newCard) => {
+                setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+            }).catch((err) => {
+                console.error(err);
+            });
+        } else {
+            api.deleteLike(card._id, !isLiked).then((newCard) => {
+                setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+            }).catch((err) => {
+                console.error(err);
+            });
+        }
+    }
+
+    function handleDeleteCard(card) {
+
+        api.removeCard(card).then(() => {
+            setCards((items) => {
+                items.filter((c) => c._id !== card._id && c)
+            });
+        }).catch((err) => {
+            console.error(err);
+        });
+
     }
 
     return (
@@ -83,6 +112,9 @@ function App() {
                           onEditProfile={handleEditProfileClick}
                           onAddPlace={handleEditPlaceClick}
                           onCardClick={handleCardClick}
+                          cards={cards}
+                          onCardLike={handleCardLike}
+                          onCardDelete={handleDeleteCard}
                     />
                     <Footer/>
 
