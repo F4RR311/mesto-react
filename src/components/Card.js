@@ -10,6 +10,9 @@ const Card = (props) => {
     function handleLikeClick() {
         props.onCardLike(props.card);
     }
+    function handleDeleteCard(){
+        props.onCardDelete(props.card)
+    }
 
     const currentUser = useContext(CurrentUserContext);
     const isOwn = props.card.owner._id === currentUser._id;
@@ -25,7 +28,7 @@ const Card = (props) => {
 
     return (
         <article className="element">
-            <button className={cardDeleteButtonClassName} onClick={props.onCardDelete} type="button"> </button>
+            <button className={cardDeleteButtonClassName} onClick={handleDeleteCard} type="button"> </button>
             <img className="element__image" alt={props.name} src={props.link} title="Посмотреть в полном размере"
                  onClick={handleClick}/>
             <h2 className="element__title">{props.name} </h2>

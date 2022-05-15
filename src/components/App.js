@@ -3,12 +3,12 @@ import '../index.css';
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import PopupWithForm from "./PopupWithForm";
 import ImagePopup from "./ImagePopup";
 import {api} from "../utils/Api.js"
 import {CurrentUserContext} from "../contexts/CurrentUserContext"
 import EditProfilePopup from "./EditProfilePopup";
 import EditaAvatarPopup from "./EditaAvatarPopup";
+import AddPlacePopup from "./AddPlacePopup";
 
 function App() {
 
@@ -21,12 +21,12 @@ function App() {
 
 
     useEffect(() => {
-          Promise.all([api.getProfile(), api.getInitialCards()])
-              .then(([user, cards])=>{
-                  setCurrentUser(user)
-                  setCards(cards)
-              })
-        }, []);
+        Promise.all([api.getProfile(), api.getInitialCards()])
+            .then(([user, cards]) => {
+                setCurrentUser(user)
+                setCards(cards)
+            })
+    }, []);
 
     function handleEditAvatarClick() {
         setEditAvatarPopupOpen(true);
@@ -90,12 +90,18 @@ function App() {
         }
     }
 
-    function handleDeleteCard(card) {
-
+    function handleCardDelete(card) {
         api.removeCard(card).then(() => {
-            setCards((items) => {
-                items.filter((c) => c._id !== card._id && c)
-            });
+            setCards((items) => items.filter((c) => c._id !== card._id && c));
+        }).catch((err) => {
+            console.error(err);
+        });
+    }
+
+    function handleAddPlaceSubmit(data) {
+        api.addCard(data).then((newCard) => {
+            setCards([...cards, newCard]);
+            closeAllPopups();
         }).catch((err) => {
             console.error(err);
         });
@@ -114,32 +120,19 @@ function App() {
                           onCardClick={handleCardClick}
                           cards={cards}
                           onCardLike={handleCardLike}
-                          onCardDelete={handleDeleteCard}
+                          onCardDelete={handleCardDelete}
                     />
                     <Footer/>
-
-                    <PopupWithForm
-                        isOpen={isAddPlacePopupOpen}
-                        onClose={closeAllPopups}
-                        name={'newPlace'}
-                        form={'addPlace'}
-                        title={'Новое место'}
-                        buttonText={'Создать'}>
-                        <input className="popup__input" id="popup__placeName-input" name="placeName"
-                               placeholder="Название"
-                               required minLength="2" maxLength="30"/>
-                        <span id="popup__placeName-input-error" className="popup__input-error">
-                        </span>
-                        <input className="popup__input" id="popup__placeLink-input" name="placeLink"
-                               placeholder="Ссылка на картинку" required type="url"/>
-                        <span id="popup__placeLink-input-error" className="popup__input-error">
-                        </span>
-                    </PopupWithForm>
 
                     <EditaAvatarPopup
                         isOpen={isEditAvatarPopupOpen}
                         onClose={closeAllPopups}
                         onUpdateAvatar={handleUpdateAvatar}
+                    />
+                    <AddPlacePopup
+                        isOpen={isAddPlacePopupOpen}
+                        onClose={closeAllPopups}
+                        onAddPlace={handleAddPlaceSubmit}
                     />
 
                     <ImagePopup

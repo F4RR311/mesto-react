@@ -25,10 +25,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe0123e0-ba98-4ceb-a72c-247bd806fbfc" name="Default Changelist" comment="addAvatar">
+    <list default="true" id="fe0123e0-ba98-4ceb-a72c-247bd806fbfc" name="Default Changelist" comment="StateUp">
+      <change afterPath="$PROJECT_DIR$/src/components/AddPlacePopup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +136,7 @@
       <workItem from="1652200712211" duration="6542000" />
       <workItem from="1652292824522" duration="4141000" />
       <workItem from="1652303438726" duration="2645000" />
-      <workItem from="1652603616338" duration="15331000" />
+      <workItem from="1652603616338" duration="17397000" />
     </task>
     <task id="LOCAL-00001" summary="import jsx+css">
       <created>1650915036421</created>
@@ -241,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652635359256</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="StateUp">
+      <created>1652638831097</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652638831097</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -274,7 +283,8 @@
     <MESSAGE value="like card" />
     <MESSAGE value="update profile" />
     <MESSAGE value="addAvatar" />
-    <option name="LAST_COMMIT_MESSAGE" value="addAvatar" />
+    <MESSAGE value="StateUp" />
+    <option name="LAST_COMMIT_MESSAGE" value="StateUp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="408" key="#ESLint" timestamp="1650909941736">
@@ -305,10 +315,10 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state width="1877" height="279" key="GridCell.Tab.0.right/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652611803227" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1652635363992">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1652638834678">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652635363992" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652638834678" />
     <state x="616" y="238" key="run.anything.popup" timestamp="1652212477580">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

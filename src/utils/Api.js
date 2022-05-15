@@ -37,8 +37,8 @@ class Api {
             method: "PATCH",
             headers: this._headers,
             body: JSON.stringify({
-                 name: data.profile_name,
-                 about: data.profile_job
+                name: data.profile_name,
+                about: data.profile_job
 
             })
 
@@ -48,26 +48,24 @@ class Api {
     }
 
 
-
-    addCard(name, link) {
+    addCard(data) {
         return fetch(`${this._baseUrl}/cards`, {
             method: "POST",
             headers: this._headers,
             body: JSON.stringify({
-                name,
-                link
+                name: data.name,
+                link: data.link
             })
         })
             .then(this._checkResponse)
     }
 
-    removeCard(id) {
-        return fetch(`${this._baseUrl}/cards/${id}`, {
+    removeCard(data) {
+        return fetch(`${this._baseUrl}/cards/${data._id}`, {
             method: "DELETE",
             headers: this._headers
         })
             .then(this._checkResponse)
-
 
     }
 
@@ -94,7 +92,7 @@ class Api {
             method: 'PATCH',
             headers: this._headers,
             body: JSON.stringify({
-             avatar: data.avatar_profile
+                avatar: data.avatar_profile
             })
 
         })
