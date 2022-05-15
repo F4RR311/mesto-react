@@ -7,7 +7,7 @@ const ImagePopup = (props) => {
             <div className="popup__image-container">
                 <button onClick={props.onClose} className="popup__close"
                         type="button" aria-label="Закрыть"> </button>
-                <figure className="popup__image-fiqure">
+                <figure className="popup__image-figure">
                     <img className="popup__image" src={props.card ? props.card.link : ''}
                          alt={props.card ? props.card.name : ''}/>
                     <figcaption className="popup__image-name">{props.card ? props.card.name : ''} </figcaption>

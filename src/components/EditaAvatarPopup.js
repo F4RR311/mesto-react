@@ -13,7 +13,6 @@ const EditaAvatarPopup = (props) => {
     }
 
     return (
-
         <PopupWithForm
             isOpen={props.isOpen}
             onClose={props.onClose}
@@ -28,6 +27,6 @@ const EditaAvatarPopup = (props) => {
                             </span>
         </PopupWithForm>
     )
-
 }
+
 export default EditaAvatarPopup;

@@ -19,7 +19,6 @@ function App() {
     const [currentUser, setCurrentUser] = useState({})
     const [cards, setCards] = useState([]);
 
-
     useEffect(() => {
         Promise.all([api.getProfile(), api.getInitialCards()])
             .then(([user, cards]) => {
@@ -105,8 +104,23 @@ function App() {
         }).catch((err) => {
             console.error(err);
         });
-
     }
+
+    useEffect(() => {
+        if (isEditProfilePopupOpen || isAddPlacePopupOpen || isEditAvatarPopupOpen || isAddPlacePopupOpen || selectedCard) {
+            function handleEsc(evt) {
+                if (evt.key === 'Escape') {
+                    closeAllPopups();
+                }
+            }
+
+            document.addEventListener('keydown', handleEsc);
+
+            return () => {
+                document.removeEventListener('keydown', handleEsc);
+            }
+        }
+    }, [isEditProfilePopupOpen, isAddPlacePopupOpen, isEditAvatarPopupOpen, isAddPlacePopupOpen, selectedCard]);
 
     return (
         <CurrentUserContext.Provider value={currentUser}>
@@ -143,10 +157,7 @@ function App() {
                         onClose={closeAllPopups}
                         isOpen={isEditProfilePopupOpen}
                         onUpdateUser={handleUpdateUser}
-
                     />
-
-
                 </div>
             </div>
         </CurrentUserContext.Provider>
