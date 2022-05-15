@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {CurrentUserContext} from "../contexts/CurrentUserContext";
 import PopupWithForm from "./PopupWithForm";
 
 const EditProfilePopup = (props) => {
 
-    const currentUser = React.useContext(CurrentUserContext);
+    const currentUser = useContext(CurrentUserContext);
 
     const [name, setName] = useState('');
     const [about, setAbout] = useState('');
@@ -16,27 +16,18 @@ const EditProfilePopup = (props) => {
 
     function handleChangeName(e) {
         setName(e.target.value)
-
-
     }
 
     function handleChangeAbout(e) {
-
         setAbout(e.target.value)
-
     }
 
-
     function handleSubmit(e) {
-        // Запрещаем браузеру переходить по адресу формы
         e.preventDefault();
-
-
         props.onUpdateUser({
-            profile_name:name,
-            profile_job:about
+            profile_name: name,
+            profile_job: about
         });
-
     }
 
     return (
@@ -65,8 +56,8 @@ const EditProfilePopup = (props) => {
                    type="text"
                    placeholder="О себе"
                    required minLength="2" maxLength="200"
-            value={about}
-            onChange={handleChangeAbout}/>
+                   value={about}
+                   onChange={handleChangeAbout}/>
             <span id="popup__job-input-error" className="popup__input-error">
                         </span>
         </PopupWithForm>

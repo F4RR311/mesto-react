@@ -8,6 +8,7 @@ import ImagePopup from "./ImagePopup";
 import {api} from "../utils/Api.js"
 import {CurrentUserContext} from "../contexts/CurrentUserContext"
 import EditProfilePopup from "./EditProfilePopup";
+import EditaAvatarPopup from "./EditaAvatarPopup";
 
 function App() {
 
@@ -50,15 +51,21 @@ function App() {
         setSelectedCard(null)
     }
 
-
-    function handleSubmit(e) {
-        e.preventDefault();
-    }
-
     function handleUpdateUser(data) {
         api.editProfile(data).then((newUser) => {
-            console.log(newUser)
+
             setCurrentUser(newUser);
+            closeAllPopups();
+        })
+            .catch((err) => {
+                console.error(err);
+            });
+    }
+
+    function handleUpdateAvatar(avatar) {
+        api.addAvatar(avatar).then((newAvatar) => {
+
+            setCurrentUser(newAvatar);
             closeAllPopups();
         })
             .catch((err) => {
@@ -97,18 +104,11 @@ function App() {
                         </span>
                     </PopupWithForm>
 
-                    <PopupWithForm
+                    <EditaAvatarPopup
                         isOpen={isEditAvatarPopupOpen}
                         onClose={closeAllPopups}
-                        name={'addAvatar'}
-                        form={'avatarForm'}
-                        title={'Обновить аватар'}
-                        buttonText={'Сохранить'}>
-                        <input className="popup__input" id="popup__placeAvatar-input"
-                               name="avatar" placeholder="Ссылка на картинку" required type="url"/>
-                        <span id="popup__placeAvatar-input-error" className="popup__input-error">
-                            </span>
-                    </PopupWithForm>
+                        onUpdateAvatar={handleUpdateAvatar}
+                    />
 
                     <ImagePopup
                         card={selectedCard}
