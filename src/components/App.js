@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import '../index.css';
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
@@ -73,20 +72,17 @@ function App() {
 
     function handleCardLike(card) {
         const isLiked = card.likes.some(i => i._id === currentUser._id);
+        api.changeStatusLike(card._id, isLiked)
+            .then((newCard) => {
+                // Формируем новый массив на основе имеющегося, подставляя в него новую карточку
+                const newCards = cards.map((c) => c._id === card._id ? newCard : c);
+                // Обновляем стейт
+                setCards(newCards);
+            })
+            .catch(err => {
+                console.log(`Ошибка: ${err}`);
+            });
 
-        if (!isLiked) {
-            api.addLike(card._id, !isLiked).then((newCard) => {
-                setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-            }).catch((err) => {
-                console.error(err);
-            });
-        } else {
-            api.deleteLike(card._id, !isLiked).then((newCard) => {
-                setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-            }).catch((err) => {
-                console.error(err);
-            });
-        }
     }
 
     function handleCardDelete(card) {

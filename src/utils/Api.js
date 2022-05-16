@@ -37,8 +37,8 @@ class Api {
             method: "PATCH",
             headers: this._headers,
             body: JSON.stringify({
-                name: data.profile_name,
-                about: data.profile_job
+                name: data.name,
+                about: data.job
 
             })
 
@@ -69,19 +69,10 @@ class Api {
 
     }
 
-    deleteLike(id) {
+    changeStatusLike(id, isLiked) {
         return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-            method: "DELETE",
-            headers: this._headers
-        })
-            .then(this._checkResponse)
-    }
-
-    addLike(id) {
-        return fetch(`${this._baseUrl}/cards/${id}/likes`, {
-            method: "PUT",
+            method:`${!isLiked ? 'PUT' : 'DELETE'}`,
             headers: this._headers,
-
         })
             .then(this._checkResponse)
 

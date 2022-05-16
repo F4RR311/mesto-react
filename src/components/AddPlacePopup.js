@@ -1,11 +1,10 @@
-import React, {useEffect, useRef, useState} from "react"
+import React, {useEffect, useState} from "react"
 import PopupWithForm from "./PopupWithForm";
 
 const AddPlacePopup = (props) => {
 
     const [name, setName] = useState('');
     const [link, setLink] = useState('');
-
 
     function handleChangeName(e) {
         setName(e.target.value)
@@ -36,10 +35,9 @@ const AddPlacePopup = (props) => {
             onSubmit={handleSubmit}
             isOpen={props.isOpen}
             onClose={props.onClose}
-            name={'newPlace'}
-            form={'addPlace'}
-            title={'Новое место'}
-            buttonText={'Создать'}>
+            name='newPlace'
+            title='Новое место'
+            buttonText='Создать'>
             <input onChange={handleChangeName} value={name} className="popup__input" id="popup__placeName-input"
                    name="placeName"
                    placeholder="Название"

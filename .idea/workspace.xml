@@ -25,11 +25,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe0123e0-ba98-4ceb-a72c-247bd806fbfc" name="Default Changelist" comment="StateUp">
+    <list default="true" id="fe0123e0-ba98-4ceb-a72c-247bd806fbfc" name="Default Changelist" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddPlacePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddPlacePopup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/EditProfilePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditProfilePopup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/EditaAvatarPopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/EditaAvatarPopup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ImagePopup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ImagePopup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +67,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../fourth-sprint/mesto" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -90,6 +94,26 @@
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -112,6 +136,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.build" />
         <item itemvalue="npm.eject" />
       </list>
     </recent_temporary>
@@ -135,7 +161,8 @@
       <workItem from="1652200712211" duration="6542000" />
       <workItem from="1652292824522" duration="4141000" />
       <workItem from="1652303438726" duration="2645000" />
-      <workItem from="1652603616338" duration="17886000" />
+      <workItem from="1652603616338" duration="18904000" />
+      <workItem from="1652726954188" duration="4492000" />
     </task>
     <task id="LOCAL-00001" summary="import jsx+css">
       <created>1650915036421</created>
@@ -256,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652640970710</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="refactor">
+      <created>1652641420756</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1652641420756</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,7 +317,6 @@
     <MESSAGE value="popups_ready" />
     <MESSAGE value="finish_popups" />
     <MESSAGE value="finish" />
-    <MESSAGE value="refactor" />
     <MESSAGE value="final refactor" />
     <MESSAGE value="getProfileInfo" />
     <MESSAGE value="like card" />
@@ -291,7 +324,8 @@
     <MESSAGE value="addAvatar" />
     <MESSAGE value="StateUp" />
     <MESSAGE value="finishWork" />
-    <option name="LAST_COMMIT_MESSAGE" value="finishWork" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
   <component name="WindowStateProjectService">
     <state x="828" y="408" key="#ESLint" timestamp="1650909941736">
@@ -302,30 +336,30 @@
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
     <state x="690" y="263" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1650910278961" />
-    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1652637967603">
+    <state x="740" y="271" key="FileChooserDialogImpl" timestamp="1652641603065">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652637967603" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1652611803227">
+    <state x="740" y="271" key="FileChooserDialogImpl/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652641603065" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1652642728148">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652611803227" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1652611803227">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652642728148" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1652642728148">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.center/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652611803227" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1652611803227">
+    <state width="1877" height="279" key="GridCell.Tab.0.center/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652642728148" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1652642728148">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.left/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652611803227" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1652611803227">
+    <state width="1877" height="279" key="GridCell.Tab.0.left/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652642728148" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1652642728148">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.right/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652611803227" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1652640984591">
+    <state width="1877" height="279" key="GridCell.Tab.0.right/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652642728148" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1652641423962">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652640984591" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1652641423962" />
     <state x="616" y="238" key="run.anything.popup" timestamp="1652212477580">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>

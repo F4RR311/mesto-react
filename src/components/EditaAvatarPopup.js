@@ -17,10 +17,10 @@ const EditaAvatarPopup = (props) => {
             isOpen={props.isOpen}
             onClose={props.onClose}
             onSubmit={handleSubmit}
-            name={'addAvatar'}
-            form={'avatarForm'}
-            title={'Обновить аватар'}
-            buttonText={'Сохранить'}>
+            name='addAvatar'
+            form='avatarForm'
+            title='Обновить аватар'
+            buttonText='Сохранить'>
             <input ref={ref} className="popup__input" id="popup__placeAvatar-input"
                    name="avatar" placeholder="Ссылка на картинку" required type="url"/>
             <span id="popup__placeAvatar-input-error" className="popup__input-error">
